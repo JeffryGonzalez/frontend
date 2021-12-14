@@ -27,6 +27,9 @@
     ]
   },
   "projects": {
+    "core-ui": {
+      "tags": []
+    },
     "frontend": {
       "tags": []
     },
