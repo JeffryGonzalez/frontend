@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@maglev-training/core-ui": ["libs/core-ui/src/index.ts"]
+      "@maglev-training/core-ui": ["libs/core-ui/src/index.ts"],
+      "@maglev-training/darkmode": ["libs/dark-mode/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
