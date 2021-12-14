@@ -40,6 +40,9 @@
       "tags": [],
       "implicitDependencies": ["core-ui"]
     },
+    "dark-mode": {
+      "tags": []
+    },
     "frontend": {
       "tags": []
     },

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DarkModeService } from '@maglev-training/darkmode';
 
 @Component({
   selector: 'maglev-training-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'frontend';
+  isDark$ = this.darkModeService.isDarkMode();
+  constructor(private darkModeService: DarkModeService) {}
+
+  toggleDarkMode() {
+    this.darkModeService.toggle();
+  }
 }

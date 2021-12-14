@@ -99,6 +99,47 @@
         }
       }
     },
+    "dark-mode": {
+      "projectType": "library",
+      "root": "libs/dark-mode",
+      "sourceRoot": "libs/dark-mode/src",
+      "prefix": "maglev-training",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/dark-mode"],
+          "options": {
+            "project": "libs/dark-mode/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/dark-mode/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/dark-mode/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/dark-mode"],
+          "options": {
+            "jestConfig": "libs/dark-mode/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/dark-mode/src/**/*.ts",
+              "libs/dark-mode/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend": {
       "projectType": "application",
       "root": "apps/frontend",
