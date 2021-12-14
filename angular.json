@@ -1,6 +1,47 @@
 {
   "version": 1,
   "projects": {
+    "core-ui": {
+      "projectType": "library",
+      "root": "libs/core-ui",
+      "sourceRoot": "libs/core-ui/src",
+      "prefix": "mui",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "outputs": ["dist/libs/core-ui"],
+          "options": {
+            "project": "libs/core-ui/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/core-ui/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "libs/core-ui/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/core-ui"],
+          "options": {
+            "jestConfig": "libs/core-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/core-ui/src/**/*.ts",
+              "libs/core-ui/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend": {
       "projectType": "application",
       "root": "apps/frontend",
