@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     enabled: true,
     content: [
-        './apps/admin/**/*.{html,ts}',
+        './apps/**/*.{html,ts}',
         './libs/**/*.{html,ts}',
     ]
   },
