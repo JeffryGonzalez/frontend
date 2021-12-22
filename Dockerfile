@@ -17,7 +17,7 @@ RUN npm run build
 FROM nginx:latest AS ngi
 ## This is the output from the build above
 COPY --from=build /dist/src/app/dist/apps/frontend /usr/share/nginx/html
-COPY /Docker/nginx.conf  /etc/nginx/conf.d/default.conf
+COPY nginx.conf  /etc/nginx/conf.d/default.conf
 # Exposing a port, here it means that inside the container
 # the app will be using Port 80 while running
 EXPOSE 80
