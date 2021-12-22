@@ -32,7 +32,6 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          dockerfile: Docker/Dockerfile
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -43,6 +42,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
         with:
+          dockerfile: Docker/Dockerfile
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
