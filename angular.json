@@ -158,7 +158,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "apps/frontend/src/favicon.ico",
-              "apps/frontend/src/assets"
+              "apps/frontend/src/assets",
+              "apps/frontend/src/silent-refresh.html"
             ],
             "styles": ["apps/frontend/src/styles.scss"],
             "scripts": []
