@@ -14,6 +14,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AuthModule } from './auth/auth.module';
+
+
 const routes: Routes = [
   {
     path: '',
@@ -27,6 +31,7 @@ const routes: Routes = [
     BrowserModule,
     CoreUiModule,
     DarkModeModule,
+    HttpClientModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(
       {},
@@ -41,6 +46,7 @@ const routes: Routes = [
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule.forRoot(),
+    AuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
