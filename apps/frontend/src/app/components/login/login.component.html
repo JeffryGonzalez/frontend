@@ -1,0 +1,4 @@
+
+  <button class="inline p-2 m-2 rounded-md border-gray-200 border-2" *ngIf="(isLoggedIn$ | async) === false" (click)="login()">Log In</button>
+  <button  class="inline p-2 m-2 rounded-md border-gray-200 border-2" *ngIf="(isLoggedIn$ | async) === true" (click)="logout()">Log Out {{ claims?.preferred_username }}</button>
+
