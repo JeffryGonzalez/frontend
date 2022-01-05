@@ -5,7 +5,9 @@
         <h1 class="text-hero font-semibold text-2xl inline">Maglev Training</h1>
         <p class="inline ml-2 font-light">beta</p>
       </div>
-      <div class="flex-1">
+
+      <div class="flex-none">
+        <maglev-training-login></maglev-training-login>
         <button (click)="toggleDarkMode()" class="inline">
           <svg
             *ngIf="(isDark$ | async) === true"
